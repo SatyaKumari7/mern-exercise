@@ -1,0 +1,106 @@
+.exercises-list-container {
+  max-width: 1000px;
+  margin: 100px auto 50px auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  @media(max-width:768px){
+    background-color: #1e1e1e69;
+  }
+  
+}
+
+.exercises-list-container h3 {
+  text-align: center;
+  color: #61dafb;
+  margin-bottom: 2rem;
+  font:bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+.table th, .table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.table th {
+  background-color: #333;
+  color: #61dafb;
+}
+
+.table tbody tr:hover {
+  background-color: #333;
+}
+
+.table td a {
+  color: #61dafb;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.2s ease;
+}
+
+.table td a:hover {
+  color: #21a1f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1.5rem;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-weight: bold;
+    color: #ccc;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .table tr {
+    padding: 1rem 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .table td {
+    padding: 1rem;
+    border-bottom: none;
+    border-top: 1px solid #444;
+  }
+
+  .table td:last-child {
+    border-bottom: none;
+  }
+}
